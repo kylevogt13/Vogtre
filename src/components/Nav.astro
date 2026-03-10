@@ -1,24 +1,46 @@
 ---
-const navLinks = [
-  { label: 'Search', href: '/search' },
-  { label: 'Buy', href: '/buyers-guide' },
-  { label: 'Sell', href: '/sellers-guide' },
-  { label: 'Communities', href: '/communities' },
-  { label: 'Our Team', href: '/team' },
-  { label: 'About', href: '/about' },
-];
 ---
 
 <nav class="nav nav--transparent" aria-label="Main navigation">
   <div class="nav__inner">
     <a href="/" class="nav__logo">
-      <span class="nav__logo-text">The Vogt Group</span>
+      <img src="/images/logo.png" alt="The Vogt Real Estate Group" />
     </a>
 
     <ul class="nav__links">
-      {navLinks.map(({ label, href }) => (
-        <li><a href={href}>{label}</a></li>
-      ))}
+      <li class="nav__dropdown">
+        <a href="/search">Search</a>
+        <ul class="nav__dropdown-menu">
+          <li><a href="/search">Search by Map</a></li>
+          <li><a href="/communities">Communities</a></li>
+        </ul>
+      </li>
+      <li class="nav__dropdown">
+        <a href="/buyers-guide">Buy</a>
+        <ul class="nav__dropdown-menu">
+          <li><a href="/buyers-guide">Buyer's Guide</a></li>
+          <li><a href="/search">Find a Home</a></li>
+          <li><a href="/pre-qualified">Get Pre-Qualified</a></li>
+        </ul>
+      </li>
+      <li class="nav__dropdown">
+        <a href="/sellers-guide">Sell</a>
+        <ul class="nav__dropdown-menu">
+          <li><a href="/sellers-guide">Seller's Guide</a></li>
+          <li><a href="/home-value">What's Your Home Worth</a></li>
+        </ul>
+      </li>
+      <li><a href="/team">Our Team</a></li>
+      <li><a href="/articles">News</a></li>
+      <li class="nav__dropdown">
+        <a href="/about">About</a>
+        <ul class="nav__dropdown-menu">
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/testimonials">Testimonials</a></li>
+          <li><a href="/refer-a-friend">Refer a Friend</a></li>
+          <li><a href="/join-our-team">Join Our Team</a></li>
+        </ul>
+      </li>
       <li><a href="/contact" class="nav__cta">Contact Us</a></li>
     </ul>
 

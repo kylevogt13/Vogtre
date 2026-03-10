@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const articles = [
+  { title: "Time to Downsize?", summary: "Explores downsizing decisions at various life stages, addressing challenges of separating from belongings while creating comfortable new spaces.", category: "Lifestyle" },
+  { title: "Pricing Your Home to Sell", summary: "Properties priced below market value will often receive multiple offers. Learn critical pricing strategies to sell faster and for more.", category: "Selling" },
+  { title: "Q&A for Sellers", summary: "Five essential questions sellers should ask before listing, emphasizing preparation beyond basic marketing steps.", category: "Selling" },
+  { title: "How to Save for a Down Payment", summary: "Strategies for accumulating funds, including cutting unnecessary expenses, automating savings, and finding extra income.", category: "Buying" },
+  { title: "5 Essential Steps to Build a Smart Home-Buying Budget", summary: "Five factors for establishing realistic purchase budgets based on your individual circumstances.", category: "Buying" },
+  { title: "What Is Buyer Agency Compensation?", summary: "Agent fee structures explained — compensation is increasingly expected from buyers in modern markets.", category: "Buying" },
+  { title: "What Are the Four C's of Credit?", summary: "Details on lender evaluation criteria for mortgage qualification decisions.", category: "Buying" },
+  { title: "5 Expert Tips for Buying Your First Investment Property", summary: "Strategic guidance for rental income and equity-building through real estate investment.", category: "Investing" },
+  { title: "Home Inspections and Warranties", summary: "The difference between structural inspections and appliance coverage, and why both matter.", category: "Buying" },
+  { title: "What You Can Afford", summary: "78% of purchasers in 2022 had to finance their purchase. Learn how to determine your realistic purchase price.", category: "Buying" },
+  { title: "Home Improvement Trends", summary: "Contemporary design emphasizing efficiency, style, and sustainable upgrades for your home.", category: "Lifestyle" },
+  { title: "Hiring an Agent", summary: "Why professional representation matters — agents provide invaluable knowledge and services.", category: "General" },
+  { title: "Finding the Perfect Home", summary: "How to prioritize your preferences beyond basic features like bedrooms and price.", category: "Buying" },
+  { title: "Earnest Money", summary: "Understanding 'good faith' deposits that protect sellers when deals progress toward closing.", category: "Buying" },
+  { title: "Home Energy Audits", summary: "Evaluating consumption patterns to identify efficiency improvements and cost savings.", category: "Lifestyle" },
+  { title: "Your Credit Score", summary: "How creditworthiness affects loan approval and the interest rates available to you.", category: "Buying" },
+  { title: "Pending Sale Mishaps", summary: "Common transaction problems during the 'under contract' period before closing.", category: "General" },
+  { title: "Is Your Home Ready to Sell?", summary: "Evaluate preparation steps to ensure competitive market positioning.", category: "Selling" },
+  { title: "Buy or Rent?", summary: "Comparing ownership advantages against rental flexibility for different life circumstances.", category: "Buying" },
+  { title: "Common Buying Mistakes", summary: "Errors that can potentially jeopardize transactions before closing — and how to avoid them.", category: "Buying" },
+  { title: "Ready to Sell?", summary: "Personal and market timing considerations for making your listing decision.", category: "Selling" },
+  { title: "The Appraisal Process", summary: "How valuation procedures affect purchase and refinancing transactions.", category: "General" },
+  { title: "Preparing to Sell", summary: "Professional preparation methods that attract competitive buyer interest.", category: "Selling" },
+  { title: "Closing Costs", summary: "Breaking down transaction fees and strategies for reducing final settlement expenses.", category: "General" },
+  { title: "Understanding Home Equity", summary: "Wealth-building mechanics through property ownership explained.", category: "Investing" },
+  { title: "First Time Buyer", summary: "Nine-step guidance for your inaugural homebuying decision.", category: "Buying" },
+  { title: "Home Maintenance Tips", summary: "Preventive care that protects your investment value long-term.", category: "Lifestyle" },
+  { title: "Sell Your House for Top Dollar", summary: "First-impression enhancement strategies to maximize buyer appeal.", category: "Selling" },
+  { title: "Boost Your Home's Curb Appeal", summary: "Exterior enhancements that create stellar initial buyer impressions.", category: "Selling" },
+  { title: "Getting your House Ready for Sale", summary: "Professional assessment and preparation before listing your home.", category: "Selling" },
+];
+---
+
+<BaseLayout title="News & Articles | The Vogt Real Estate Group" description="Real estate tips, market insights, and helpful guides from The Vogt Real Estate Group serving Sacramento, Wilton, and surrounding communities.">
+  <Nav />
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="overline">Knowledge Center</span>
+      <h1>News & Articles</h1>
+      <p>
+        Tips, insights, and guides to help you make informed real estate decisions
+        in the Sacramento market.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+        {articles.map((article) => (
+          <div class="testimonial-card fade-in" style="margin-bottom: 0;">
+            <div style="margin-bottom: 0.75rem;">
+              <span class="overline" style="font-size: 0.65rem;">{article.category}</span>
+            </div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">{article.title}</h3>
+            <p style="font-style: normal; margin-bottom: 0;">{article.summary}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Have Questions About Real Estate?</h2>
+      <p>Our team is here to help you navigate the market with confidence.</p>
+      <a href="/contact" class="btn btn-outline">Contact Us</a>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

@@ -4,7 +4,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="The Vogt Real Estate Group | Sacramento & Wilton Homes">
+<BaseLayout title="The Vogt Real Estate Group | Homes for Sale in Wilton, Sacramento, Fair Oaks &amp; Roseville">
   <Nav />
 
   <!-- ===== HERO ===== -->
@@ -12,7 +12,7 @@ import Footer from '../components/Footer.astro';
     <div class="hero__bg">
       <!-- Replace with your hero image: a wide Sacramento/Wilton landscape or luxury home photo -->
       <img
-        src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
+        src="/images/hero-home.png"
         alt="Beautiful home in Sacramento region"
         loading="eager"
       />
@@ -21,11 +21,9 @@ import Footer from '../components/Footer.astro';
     <div class="container">
       <div class="hero__content">
         <span class="overline">Sacramento · Wilton · Fair Oaks · Roseville</span>
-        <h1>Your Home Journey Starts&nbsp;Here</h1>
+        <h1>The Vogt Real Estate Group</h1>
         <p>
-          Born and raised in the Greater Sacramento Region, we bring
-          multigenerational expertise, heart, and commitment to every
-          transaction.
+          Comprehensive Real Estate Services
         </p>
         <div class="hero__actions">
           <a href="/search" class="btn btn-primary">Search Homes</a>
@@ -72,7 +70,7 @@ import Footer from '../components/Footer.astro';
       <div class="services-grid fade-in">
         <a href="/search" class="service-card">
           <img
-            src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=75"
+            src="/images/service-buy.png"
             alt="Modern home interior"
             loading="lazy"
           />
@@ -86,7 +84,7 @@ import Footer from '../components/Footer.astro';
 
         <a href="/sellers-guide" class="service-card">
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=75"
+            src="/images/service-sell.jpg"
             alt="Luxury home exterior"
             loading="lazy"
           />
@@ -100,7 +98,7 @@ import Footer from '../components/Footer.astro';
 
         <a href="/contact" class="service-card">
           <img
-            src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=800&q=75"
+            src="/images/service-contact.png"
             alt="Consultation meeting"
             loading="lazy"
           />
@@ -172,7 +170,7 @@ import Footer from '../components/Footer.astro';
         <div class="about__image fade-in">
           <!-- Replace with your team photo -->
           <img
-            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=75"
+            src="/images/team-group.png"
             alt="The Vogt Real Estate Group team"
             loading="lazy"
           />
@@ -219,7 +217,7 @@ import Footer from '../components/Footer.astro';
 
       <div class="communities-grid fade-in">
         <a href="/communities#wilton" class="community-card">
-          <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=75" alt="Wilton" loading="lazy" />
+          <img src="/images/community-wilton.jpg" alt="Wilton" loading="lazy" />
           <div class="community-card__overlay"></div>
           <div class="community-card__name">
             <h4>Wilton</h4>
@@ -228,7 +226,7 @@ import Footer from '../components/Footer.astro';
         </a>
 
         <a href="/communities#sacramento" class="community-card">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=75" alt="Sacramento" loading="lazy" />
+          <img src="/images/community-sacramento.png" alt="Sacramento" loading="lazy" />
           <div class="community-card__overlay"></div>
           <div class="community-card__name">
             <h4>Sacramento</h4>
@@ -237,7 +235,7 @@ import Footer from '../components/Footer.astro';
         </a>
 
         <a href="/communities#fair-oaks" class="community-card">
-          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=75" alt="Fair Oaks" loading="lazy" />
+          <img src="/images/community-fair-oaks.png" alt="Fair Oaks" loading="lazy" />
           <div class="community-card__overlay"></div>
           <div class="community-card__name">
             <h4>Fair Oaks</h4>
@@ -246,11 +244,29 @@ import Footer from '../components/Footer.astro';
         </a>
 
         <a href="/communities#roseville" class="community-card">
-          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=75" alt="Roseville" loading="lazy" />
+          <img src="/images/community-roseville.jpg" alt="Roseville" loading="lazy" />
           <div class="community-card__overlay"></div>
           <div class="community-card__name">
             <h4>Roseville</h4>
             <span>Family Friendly</span>
+          </div>
+        </a>
+
+        <a href="/communities#elk-grove" class="community-card">
+          <img src="/images/community-elk-grove.png" alt="Elk Grove" loading="lazy" />
+          <div class="community-card__overlay"></div>
+          <div class="community-card__name">
+            <h4>Elk Grove</h4>
+            <span>Family-Focused</span>
+          </div>
+        </a>
+
+        <a href="/communities#folsom" class="community-card">
+          <img src="/images/community-folsom.png" alt="Folsom" loading="lazy" />
+          <div class="community-card__overlay"></div>
+          <div class="community-card__name">
+            <h4>Folsom</h4>
+            <span>Lake Living</span>
           </div>
         </a>
       </div>
@@ -305,7 +321,7 @@ import Footer from '../components/Footer.astro';
       <div class="guides-grid fade-in">
         <a href="/sellers-guide" class="guide-card">
           <img
-            src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=900&q=75"
+            src="/images/interior-1.jpg"
             alt="Selling a home"
             loading="lazy"
           />
@@ -322,7 +338,7 @@ import Footer from '../components/Footer.astro';
 
         <a href="/buyers-guide" class="guide-card">
           <img
-            src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=900&q=75"
+            src="/images/interior-2.jpg"
             alt="Buying a home"
             loading="lazy"
           />
@@ -348,7 +364,7 @@ import Footer from '../components/Footer.astro';
         Get a free, no-obligation market analysis from our team.
         Find out what your property is worth in today's market.
       </p>
-      <a href="/contact" class="btn btn-outline">Get Your Free Estimate</a>
+      <a href="/home-value" class="btn btn-outline">Get Your Free Estimate</a>
     </div>
   </section>
 
@@ -365,12 +381,12 @@ import Footer from '../components/Footer.astro';
             tools, and a supportive team environment that empowers you to reach
             your full potential.
           </p>
-          <a href="/contact" class="btn btn-primary">Get in Touch</a>
+          <a href="/join-our-team" class="btn btn-primary">Get in Touch</a>
         </div>
 
         <div class="join-team__image fade-in">
           <img
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=75"
+            src="/images/join-team.png"
             alt="Real estate team collaboration"
             loading="lazy"
           />

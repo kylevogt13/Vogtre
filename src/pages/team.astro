@@ -2,9 +2,76 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+
+const teamMembers = [
+  {
+    name: 'Kris Vogt',
+    title: 'Broker',
+    license: 'CalDRE# 01125362',
+    phone: '(916) 801-4002',
+    photo: '/images/kris-vogt.png',
+    bio: 'A 35+ year veteran of Sacramento real estate, Kris brings deep market knowledge and trusted relationships to every client interaction. As the team leader, he sets the standard for integrity, professionalism, and results.',
+  },
+  {
+    name: 'Kellie Vogt',
+    title: 'Real Estate Agent',
+    license: 'CalDRE# 01895765',
+    phone: '(916) 801-0002',
+    photo: '/images/kellie-vogt.png',
+    bio: 'Known for exceptional communication and professionalism, Kellie ensures every transaction is smooth, friendly, and stress-free. Her warmth and dedication make clients feel like family.',
+  },
+  {
+    name: 'Kyle Vogt',
+    title: 'Real Estate Agent',
+    license: 'CalDRE# 01978934',
+    phone: '(916) 802-1864',
+    photo: '/images/kyle-vogt.png',
+    bio: 'Combining real estate expertise with cutting-edge technology and marketing strategy, Kyle delivers modern, results-driven service. His background in construction provides invaluable knowledge for buyers and sellers alike.',
+  },
+  {
+    name: 'Kelli Schaefer',
+    title: 'Real Estate Agent',
+    license: 'CalDRE# 01295379',
+    phone: '(916) 996-0239',
+    photo: '/images/kelli-schaefer.png',
+    bio: 'An experienced agent dedicated to helping clients navigate the Sacramento real estate market with confidence and care.',
+  },
+  {
+    name: 'Alicia Norgaard',
+    title: 'Real Estate Agent',
+    license: 'CalDRE# 01973614',
+    phone: '(916) 947-0845',
+    photo: '/images/alicia-norgaard.png',
+    bio: 'Alicia brings enthusiasm and a client-first approach to every transaction, ensuring a smooth and enjoyable experience for buyers and sellers.',
+  },
+  {
+    name: 'Susie Kelly',
+    title: 'Real Estate Agent',
+    license: 'CalDRE# 01872723',
+    phone: '(916) 271-3181',
+    photo: '/images/susie-kelly.png',
+    bio: 'With years of experience in the Sacramento market, Susie is committed to providing personalized service and expert guidance throughout the real estate process.',
+  },
+  {
+    name: 'Chris Mullins',
+    title: 'Real Estate Agent',
+    license: 'CalDRE# 01190692',
+    phone: '(916) 601-8811',
+    photo: '/images/vogt-group.png',
+    bio: 'Chris brings a wealth of real estate knowledge and a dedication to helping clients achieve their property goals in the greater Sacramento area.',
+  },
+  {
+    name: 'Bea Davis',
+    title: 'Real Estate Agent',
+    license: 'CalDRE# 01344077',
+    phone: '(916) 541-0327',
+    photo: '/images/bea-davis.jpg',
+    bio: 'Bea is a trusted real estate professional with deep roots in the Sacramento community, offering clients honest guidance and dedicated service.',
+  },
+];
 ---
 
-<BaseLayout title="Our Team | The Vogt Real Estate Group">
+<BaseLayout title="Our Team | The Vogt Real Estate Group" description="Meet the experienced agents of The Vogt Real Estate Group serving Sacramento, Wilton, Fair Oaks, Roseville, and surrounding communities.">
   <Nav />
 
   <section class="page-hero">
@@ -20,63 +87,27 @@ import Footer from '../components/Footer.astro';
 
   <section>
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; max-width: 960px; margin: 0 auto;">
-
-        <!-- Replace placeholder images with actual team photos -->
-        <div class="fade-in" style="text-align: center;">
-          <div style="aspect-ratio: 3/4; overflow: hidden; margin-bottom: 1.25rem; background: var(--c-cream);">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=75"
-              alt="Kris Vogt"
-              style="width: 100%; height: 100%; object-fit: cover;"
-              loading="lazy"
-            />
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; max-width: 1100px; margin: 0 auto;">
+        {teamMembers.map((member) => (
+          <div class="fade-in" style="text-align: center;">
+            <div style="aspect-ratio: 1; overflow: hidden; margin-bottom: 1.25rem; background: var(--c-cream); border-radius: 50%; max-width: 220px; margin-left: auto; margin-right: auto;">
+              <img
+                src={member.photo}
+                alt={member.name}
+                style="width: 100%; height: 100%; object-fit: cover;"
+                loading="lazy"
+              />
+            </div>
+            <h3 style="margin-bottom: 0.25rem;">{member.name}</h3>
+            <span class="overline" style="font-size: 0.68rem;">{member.title}</span>
+            <p style="color: var(--c-slate); margin-top: 0.75rem; font-size: 0.9rem;">
+              {member.bio}
+            </p>
+            <p style="color: var(--c-muted); font-size: 0.78rem; margin-top: 0.5rem;">
+              {member.license} · <a href={`tel:${member.phone.replace(/[^0-9]/g, '')}`} style="color: var(--c-gold);">{member.phone}</a>
+            </p>
           </div>
-          <h3 style="margin-bottom: 0.25rem;">Kris Vogt</h3>
-          <span class="overline" style="font-size: 0.68rem;">Broker · 35+ Years Experience</span>
-          <p style="color: var(--c-slate); margin-top: 0.75rem; font-size: 0.9rem;">
-            A 35+ year veteran of Sacramento real estate, Kris brings
-            deep market knowledge and trusted relationships to every
-            client interaction.
-          </p>
-        </div>
-
-        <div class="fade-in" style="text-align: center;">
-          <div style="aspect-ratio: 3/4; overflow: hidden; margin-bottom: 1.25rem; background: var(--c-cream);">
-            <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=75"
-              alt="Kellie Vogt"
-              style="width: 100%; height: 100%; object-fit: cover;"
-              loading="lazy"
-            />
-          </div>
-          <h3 style="margin-bottom: 0.25rem;">Kellie Vogt</h3>
-          <span class="overline" style="font-size: 0.68rem;">Agent · Client Relations</span>
-          <p style="color: var(--c-slate); margin-top: 0.75rem; font-size: 0.9rem;">
-            Known for exceptional communication and professionalism,
-            Kellie ensures every transaction is smooth, friendly, and
-            stress-free.
-          </p>
-        </div>
-
-        <div class="fade-in" style="text-align: center;">
-          <div style="aspect-ratio: 3/4; overflow: hidden; margin-bottom: 1.25rem; background: var(--c-cream);">
-            <img
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=75"
-              alt="Kyle Vogt"
-              style="width: 100%; height: 100%; object-fit: cover;"
-              loading="lazy"
-            />
-          </div>
-          <h3 style="margin-bottom: 0.25rem;">Kyle Vogt</h3>
-          <span class="overline" style="font-size: 0.68rem;">Broker · Technology & Marketing</span>
-          <p style="color: var(--c-slate); margin-top: 0.75rem; font-size: 0.9rem;">
-            Combining real estate expertise with cutting-edge technology
-            and marketing strategy to deliver modern, results-driven
-            service.
-          </p>
-        </div>
-
+        ))}
       </div>
     </div>
   </section>

@@ -6,7 +6,9 @@ const year = new Date().getFullYear();
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <h4>The Vogt Real Estate Group</h4>
+        <a href="/">
+          <img src="/images/logo.png" alt="The Vogt Real Estate Group" style="height: 60px; width: auto; margin-bottom: 1rem;" />
+        </a>
         <p>13098 Apple Road</p>
         <p>Wilton, California 95693</p>
         <p style="margin-top: 0.75rem;">
@@ -15,6 +17,14 @@ const year = new Date().getFullYear();
         <p>
           <a href="mailto:thevogts@thevogtregroup.com">thevogts@thevogtregroup.com</a>
         </p>
+        <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+          <a href="https://facebook.com/Vogtrealestate/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: rgba(255,255,255,0.5); transition: color 0.2s;">
+            Facebook
+          </a>
+          <a href="https://instagram.com/kylevogt1/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: rgba(255,255,255,0.5); transition: color 0.2s;">
+            Instagram
+          </a>
+        </div>
       </div>
 
       <div class="footer__col">
@@ -24,6 +34,8 @@ const year = new Date().getFullYear();
           <li><a href="/buyers-guide">Buyer's Guide</a></li>
           <li><a href="/sellers-guide">Seller's Guide</a></li>
           <li><a href="/communities">Communities</a></li>
+          <li><a href="/home-value">Home Valuation</a></li>
+          <li><a href="/pre-qualified">Get Pre-Qualified</a></li>
         </ul>
       </div>
 
@@ -48,9 +60,15 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="footer__bottom">
-      <p>&copy; {year} The Vogt Real Estate Group. All rights reserved. DRE #02144449</p>
+      <div>
+        <p>&copy; {year} The Vogt Real Estate Group. All rights reserved. DRE #02144449</p>
+        <p style="margin-top: 0.5rem; font-size: 0.72rem; opacity: 0.6; max-width: 640px;">
+          All information is deemed reliable but not guaranteed and should be independently verified.
+          All properties are subject to prior sale, change, or withdrawal.
+        </p>
+      </div>
       <div class="footer__eho">
-        <span>Equal Housing Opportunity</span>
+        <img src="/images/realtor-eho-logo.png" alt="Equal Housing Opportunity and REALTOR logos" />
       </div>
     </div>
   </div>
