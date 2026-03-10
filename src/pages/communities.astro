@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const communities = [
+  {
+    name: 'Wilton',
+    slug: 'wilton',
+    tagline: 'Rural Charm, Close to Everything',
+    description: 'Known for its country living, equestrian properties, and wide-open spaces, Wilton offers a peaceful lifestyle just minutes from Sacramento. Excellent schools and a tight-knit community make it ideal for families.',
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=75',
+  },
+  {
+    name: 'Sacramento',
+    slug: 'sacramento',
+    tagline: 'The Heart of California',
+    description: 'As the state capital, Sacramento offers diverse neighborhoods from the historic charm of Midtown and East Sac to the modern developments of Natomas and Pocket. A vibrant food scene, parks, and culture.',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=75',
+  },
+  {
+    name: 'Fair Oaks',
+    slug: 'fair-oaks',
+    tagline: 'Tree-lined Streets & Village Charm',
+    description: 'Fair Oaks blends small-town charm with suburban convenience. The historic Fair Oaks Village, the American River Parkway, and excellent schools make this a sought-after family community.',
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=75',
+  },
+  {
+    name: 'Roseville',
+    slug: 'roseville',
+    tagline: 'Growth, Amenities & Family Life',
+    description: 'Roseville consistently ranks among the best places to live in California. Master-planned communities, top-rated schools, shopping, dining, and proximity to both Sacramento and Lake Tahoe.',
+    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=75',
+  },
+  {
+    name: 'El Dorado Hills',
+    slug: 'el-dorado-hills',
+    tagline: 'Upscale Foothill Living',
+    description: 'Nestled in the Sierra foothills, El Dorado Hills offers luxury homes, rolling landscapes, acclaimed schools, and a vibrant town center. A premium address in the greater Sacramento region.',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=75',
+  },
+  {
+    name: 'Elk Grove',
+    slug: 'elk-grove',
+    tagline: 'Family-Focused & Growing',
+    description: 'One of Sacramento\'s fastest-growing cities, Elk Grove offers affordable housing, excellent parks, diverse dining, and a strong sense of community.',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=75',
+  },
+];
+---
+
+<BaseLayout title="Communities | The Vogt Real Estate Group">
+  <Nav />
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="overline">Explore</span>
+      <h1>Our Communities</h1>
+      <p>
+        We know the Sacramento region inside and out. Explore the
+        neighborhoods where we help families find home.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      {communities.map((community, i) => (
+        <div
+          id={community.slug}
+          class="fade-in"
+          style={`
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(2rem, 5vw, 5rem);
+            align-items: center;
+            margin-bottom: 5rem;
+            ${i % 2 === 1 ? 'direction: rtl;' : ''}
+          `}
+        >
+          <div style={i % 2 === 1 ? 'direction: ltr;' : ''}>
+            <img
+              src={community.image}
+              alt={community.name}
+              style="width: 100%; aspect-ratio: 4/3; object-fit: cover;"
+              loading="lazy"
+            />
+          </div>
+          <div style={i % 2 === 1 ? 'direction: ltr;' : ''}>
+            <span class="overline">{community.tagline}</span>
+            <h2 style="margin: 0.75rem 0 1rem;">{community.name}</h2>
+            <p style="color: var(--c-slate); margin-bottom: 1.5rem;">
+              {community.description}
+            </p>
+            <a href="/search" class="btn btn-ghost">
+              Search {community.name} Homes →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  @media (max-width: 768px) {
+    div[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+      direction: ltr !important;
+    }
+  }
+</style>

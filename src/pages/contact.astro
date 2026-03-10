@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Contact Us | The Vogt Real Estate Group">
+  <Nav />
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="overline">Get in Touch</span>
+      <h1>Contact Us</h1>
+      <p>
+        Whether you're ready to buy, sell, or just have questions about the
+        Sacramento market — we'd love to hear from you.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); align-items: start;">
+
+        <div class="contact-form">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="sr-only">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="interest">I'm Interested In</label>
+              <select id="interest" name="interest">
+                <option value="">Select one...</option>
+                <option value="buying">Buying a Home</option>
+                <option value="selling">Selling a Home</option>
+                <option value="valuation">Home Valuation</option>
+                <option value="investing">Real Estate Investing</option>
+                <option value="join">Joining the Team</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <div>
+          <div style="margin-bottom: 2.5rem;">
+            <span class="overline">Contact Details</span>
+            <h3 style="margin-top: 0.75rem; margin-bottom: 1rem;">The Vogt Real Estate Group</h3>
+            <p style="color: var(--c-slate); margin-bottom: 0.5rem;">
+              13098 Apple Road<br />
+              Wilton, California 95693
+            </p>
+            <p style="margin-top: 1rem;">
+              <a href="tel:9168014002" style="color: var(--c-gold); font-weight: 600;">
+                (916) 801-4002
+              </a>
+            </p>
+            <p style="margin-top: 0.25rem;">
+              <a href="mailto:thevogts@thevogtregroup.com" style="color: var(--c-gold);">
+                thevogts@thevogtregroup.com
+              </a>
+            </p>
+          </div>
+
+          <div style="margin-bottom: 2.5rem;">
+            <span class="overline">Office Hours</span>
+            <p style="color: var(--c-slate); margin-top: 0.75rem;">
+              Monday – Friday: 9:00 AM – 6:00 PM<br />
+              Saturday: 10:00 AM – 4:00 PM<br />
+              Sunday: By Appointment
+            </p>
+          </div>
+
+          <div>
+            <span class="overline">License</span>
+            <p style="color: var(--c-slate); margin-top: 0.75rem;">
+              DRE #02144449
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  @media (max-width: 768px) {
+    div[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

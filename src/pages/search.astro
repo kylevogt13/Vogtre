@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Search Homes | The Vogt Real Estate Group">
+  <Nav />
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="overline">Property Search</span>
+      <h1>Find Your Home</h1>
+      <p>
+        Search thousands of active listings across Sacramento, Placer, Yolo,
+        El Dorado, and surrounding counties — powered by MetroList MLS.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="search-embed" style="
+        background: var(--c-cream);
+        border: 1.5px solid var(--c-sand);
+        min-height: 600px;
+        margin-top: -2rem;
+      ">
+        <!--
+          🔑 IDX FULL SEARCH PAGE
+          ═══════════════════════
+          This is where your full IDX search experience lives.
+
+          FOR IDX BROKER:
+            <script charset="UTF-8" type="text/javascript"
+              id="idxwidgetsrc-XXXXX"
+              src="//YOUR-SUBDOMAIN.idxbroker.com/idx/widgetname.php?widgetid=XXXXX">
+            </script>
+
+          FOR BUYING BUDDY:
+            <div class="bb-idx-search" data-bb-widget="search"></div>
+            <script src="https://your-account.buyingbuddy.com/bb.js"></script>
+
+          FOR SHOWCASE IDX:
+            <div id="showcase-idx-container"></div>
+            <script src="https://showcaseidx.com/js/embed.js?key=YOUR_KEY"></script>
+
+          You can also iframe your IDX provider's hosted search page:
+            <iframe
+              src="https://YOUR-SUBDOMAIN.idxbroker.com/idx/search/advanced"
+              style="width:100%;height:800px;border:none;">
+            </iframe>
+        -->
+        <div class="search-embed__placeholder" style="color: var(--c-muted); text-align: center;">
+          <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+            [ Full IDX Search — Connect your MetroList feed here ]
+          </p>
+          <p style="font-size: 0.82rem; opacity: 0.7;">
+            Replace this placeholder with your IDX Broker, Buying Buddy,
+            or other provider widget code.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

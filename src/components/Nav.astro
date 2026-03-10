@@ -1,0 +1,31 @@
+---
+const navLinks = [
+  { label: 'Search', href: '/search' },
+  { label: 'Buy', href: '/buyers-guide' },
+  { label: 'Sell', href: '/sellers-guide' },
+  { label: 'Communities', href: '/communities' },
+  { label: 'Our Team', href: '/team' },
+  { label: 'About', href: '/about' },
+];
+---
+
+<nav class="nav nav--transparent" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo">
+      <span class="nav__logo-text">The Vogt Group</span>
+    </a>
+
+    <ul class="nav__links">
+      {navLinks.map(({ label, href }) => (
+        <li><a href={href}>{label}</a></li>
+      ))}
+      <li><a href="/contact" class="nav__cta">Contact Us</a></li>
+    </ul>
+
+    <button class="nav__hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>

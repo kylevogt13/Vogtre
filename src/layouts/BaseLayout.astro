@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'The Vogt Real Estate Group — Your trusted multigenerational real estate team serving Sacramento, Wilton, Fair Oaks, Roseville, and the greater Sacramento region.' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thevogtregroup.com" />
+</head>
+<body>
+  <slot />
+
+  <script>
+    // Scroll-based nav style
+    const nav = document.querySelector('.nav');
+    if (nav) {
+      const updateNav = () => {
+        if (window.scrollY > 60) {
+          nav.classList.remove('nav--transparent');
+          nav.classList.add('nav--solid');
+        } else {
+          nav.classList.add('nav--transparent');
+          nav.classList.remove('nav--solid');
+        }
+      };
+      updateNav();
+      window.addEventListener('scroll', updateNav, { passive: true });
+    }
+
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.nav__hamburger');
+    const mobileMenu = document.querySelector('.nav__links');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+    }
+
+    // Intersection observer for fade-in
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>

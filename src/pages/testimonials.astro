@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const testimonials = [
+  {
+    quote: "I had the pleasure of working with Kris Vogt on a purchase of an investment property in Wilton. He was great to work with and I appreciated his clear communication. The purchase was closed in less than 20 days. He made everything very easy. Thank you Kris and team!",
+    name: "Cameron Villa",
+  },
+  {
+    quote: "As a fellow real estate professional, I must give Kellie and her team at Vogt Real Estate Group 5 stars! I represented some long term clients on a recent home purchase and Kellie Vogt was the listing agent. The communication was far and away the best I've experienced in 25 years of doing this. She was so friendly and professional and really made the process a breeze. We worked together effortlessly for a quick close and I am looking forward to working with her again in the future.",
+    name: "April Van Patten",
+  },
+  {
+    quote: "We're delighted to have reconnected with the Vogt Real Estate Group! Kris and Kellie are exceptionally joyful people and realtors. Our sale was smooth and efficient; we were treated with warmth, honesty and integrity. We'll recommend them to all of our friends and family!",
+    name: "Nancy Kelly",
+  },
+];
+---
+
+<BaseLayout title="Testimonials | The Vogt Real Estate Group">
+  <Nav />
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="overline">Client Reviews</span>
+      <h1>Testimonials</h1>
+      <p>
+        Hear from the families and professionals who trust The Vogt
+        Real Estate Group with their most important decisions.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="max-width: 800px;">
+      {testimonials.map((t) => (
+        <div class="testimonial-card fade-in" style="margin-bottom: 2rem;">
+          <p>{t.quote}</p>
+          <div class="testimonial-card__author">{t.name}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to Experience the Difference?</h2>
+      <p>Let's write your success story together.</p>
+      <a href="/contact" class="btn btn-outline">Contact Us</a>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

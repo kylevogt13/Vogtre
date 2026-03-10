@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Our Team | The Vogt Real Estate Group">
+  <Nav />
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="overline">Our People</span>
+      <h1>Meet the Team</h1>
+      <p>
+        A dedicated multigenerational team working for you with heart,
+        commitment, and vision.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; max-width: 960px; margin: 0 auto;">
+
+        <!-- Replace placeholder images with actual team photos -->
+        <div class="fade-in" style="text-align: center;">
+          <div style="aspect-ratio: 3/4; overflow: hidden; margin-bottom: 1.25rem; background: var(--c-cream);">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=75"
+              alt="Kris Vogt"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy"
+            />
+          </div>
+          <h3 style="margin-bottom: 0.25rem;">Kris Vogt</h3>
+          <span class="overline" style="font-size: 0.68rem;">Broker · 35+ Years Experience</span>
+          <p style="color: var(--c-slate); margin-top: 0.75rem; font-size: 0.9rem;">
+            A 35+ year veteran of Sacramento real estate, Kris brings
+            deep market knowledge and trusted relationships to every
+            client interaction.
+          </p>
+        </div>
+
+        <div class="fade-in" style="text-align: center;">
+          <div style="aspect-ratio: 3/4; overflow: hidden; margin-bottom: 1.25rem; background: var(--c-cream);">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=75"
+              alt="Kellie Vogt"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy"
+            />
+          </div>
+          <h3 style="margin-bottom: 0.25rem;">Kellie Vogt</h3>
+          <span class="overline" style="font-size: 0.68rem;">Agent · Client Relations</span>
+          <p style="color: var(--c-slate); margin-top: 0.75rem; font-size: 0.9rem;">
+            Known for exceptional communication and professionalism,
+            Kellie ensures every transaction is smooth, friendly, and
+            stress-free.
+          </p>
+        </div>
+
+        <div class="fade-in" style="text-align: center;">
+          <div style="aspect-ratio: 3/4; overflow: hidden; margin-bottom: 1.25rem; background: var(--c-cream);">
+            <img
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=75"
+              alt="Kyle Vogt"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy"
+            />
+          </div>
+          <h3 style="margin-bottom: 0.25rem;">Kyle Vogt</h3>
+          <span class="overline" style="font-size: 0.68rem;">Broker · Technology & Marketing</span>
+          <p style="color: var(--c-slate); margin-top: 0.75rem; font-size: 0.9rem;">
+            Combining real estate expertise with cutting-edge technology
+            and marketing strategy to deliver modern, results-driven
+            service.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Work With a Team That Cares</h2>
+      <p>Ready to start your real estate journey? Let's talk.</p>
+      <a href="/contact" class="btn btn-outline">Contact Us</a>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

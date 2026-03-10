@@ -1,0 +1,383 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="The Vogt Real Estate Group | Sacramento & Wilton Homes">
+  <Nav />
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__bg">
+      <!-- Replace with your hero image: a wide Sacramento/Wilton landscape or luxury home photo -->
+      <img
+        src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
+        alt="Beautiful home in Sacramento region"
+        loading="eager"
+      />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero__content">
+        <span class="overline">Sacramento · Wilton · Fair Oaks · Roseville</span>
+        <h1>Your Home Journey Starts&nbsp;Here</h1>
+        <p>
+          Born and raised in the Greater Sacramento Region, we bring
+          multigenerational expertise, heart, and commitment to every
+          transaction.
+        </p>
+        <div class="hero__actions">
+          <a href="/search" class="btn btn-primary">Search Homes</a>
+          <a href="/contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <div class="stats-bar">
+    <div class="stats-bar__inner container">
+      <div class="stat">
+        <div class="stat__number">35+</div>
+        <div class="stat__label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat__number">$550K</div>
+        <div class="stat__label">Average Price</div>
+      </div>
+      <div class="stat">
+        <div class="stat__number">100+</div>
+        <div class="stat__label">Families Helped</div>
+      </div>
+      <div class="stat">
+        <div class="stat__number">7</div>
+        <div class="stat__label">Counties Served</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="overline">What We Do</span>
+        <h2>Comprehensive Real Estate Services</h2>
+        <p>
+          Whether you're buying your first home, selling your family property,
+          or exploring investment opportunities — we're here at every step.
+        </p>
+      </div>
+
+      <div class="services-grid fade-in">
+        <a href="/search" class="service-card">
+          <img
+            src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=75"
+            alt="Modern home interior"
+            loading="lazy"
+          />
+          <div class="service-card__overlay"></div>
+          <div class="service-card__content">
+            <h3>Buy a Home</h3>
+            <p>Find your dream property with personalized search and expert guidance.</p>
+            <span class="btn-ghost">Browse Listings →</span>
+          </div>
+        </a>
+
+        <a href="/sellers-guide" class="service-card">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=75"
+            alt="Luxury home exterior"
+            loading="lazy"
+          />
+          <div class="service-card__overlay"></div>
+          <div class="service-card__content">
+            <h3>Sell Your Home</h3>
+            <p>Strategic pricing, staging advice, and marketing that gets results.</p>
+            <span class="btn-ghost">Seller's Guide →</span>
+          </div>
+        </a>
+
+        <a href="/contact" class="service-card">
+          <img
+            src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=800&q=75"
+            alt="Consultation meeting"
+            loading="lazy"
+          />
+          <div class="service-card__overlay"></div>
+          <div class="service-card__content">
+            <h3>Get a Valuation</h3>
+            <p>Discover what your home is worth in today's Sacramento market.</p>
+            <span class="btn-ghost">Request Estimate →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IDX SEARCH EMBED ===== -->
+  <section class="search-section">
+    <div class="container">
+      <span class="overline">Property Search</span>
+      <h2>Find Your Next Home</h2>
+      <p>
+        Browse thousands of active listings across the Sacramento region,
+        powered by MetroList MLS.
+      </p>
+
+      <div class="search-embed">
+        <!--
+          🔑 IDX INTEGRATION POINT
+          ════════════════════════
+          Replace this placeholder with your IDX provider's embed code.
+
+          RECOMMENDED OPTIONS for MetroList Sacramento:
+
+          1. IDX Broker (idxbroker.com)
+             - Most popular, works with any site
+             - JavaScript widget embed or iframe
+             - ~$50-80/mo for Core plan
+             - Paste their <script> tag here
+
+          2. Buying Buddy (buyingbuddy.com)
+             - Widget-based, works on any site
+             - Good CRM integration
+             - Paste widget shortcode <div> here
+
+          3. Showcase IDX (showcaseidx.com)
+             - Modern UI, good SEO
+             - JavaScript embed
+
+          4. iHomefinder (ihomefinder.com)
+             - Strong lead capture
+             - API + widget options
+
+          All require MetroList IDX data license approval.
+          Contact your MLS for the IDX request form.
+        -->
+        <div class="search-embed__placeholder">
+          <p>[ IDX Search Widget — Connect your MetroList feed here ]</p>
+          <p style="margin-top: 0.5rem; font-size: 0.78rem; opacity: 0.6;">
+            See README for setup instructions
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image fade-in">
+          <!-- Replace with your team photo -->
+          <img
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=75"
+            alt="The Vogt Real Estate Group team"
+            loading="lazy"
+          />
+          <div class="about__image-accent"></div>
+        </div>
+
+        <div class="about__text fade-in">
+          <span class="overline">Meet the Team</span>
+          <h2>The Vogt Real Estate Group</h2>
+          <p>
+            We know buying or selling a home is more than a transaction — it's a
+            life decision. Our mission is to guide you with trust, knowledge,
+            and heart in every step of your real estate journey.
+          </p>
+          <p>
+            At The Vogt Real Estate Group, we are a proud multigenerational team,
+            born and raised in the Greater Sacramento Region. We bring together
+            the wisdom that comes with life and business experience, along with
+            the fresh energy and vision needed to embrace the future.
+          </p>
+          <p>
+            With The Vogt Real Estate Group, you don't just have an agent — you
+            have a dedicated team working for you with heart, commitment,
+            and vision.
+          </p>
+          <a href="/team" class="btn btn-primary">Meet Our Team</a>
+          <div class="about__license">DRE License #02144449</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMUNITIES ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="overline">Explore</span>
+        <h2>Sacramento Region Communities</h2>
+        <p>
+          We know this community inside and out. Discover the neighborhoods
+          where we live, work, and help families find home.
+        </p>
+      </div>
+
+      <div class="communities-grid fade-in">
+        <a href="/communities#wilton" class="community-card">
+          <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=75" alt="Wilton" loading="lazy" />
+          <div class="community-card__overlay"></div>
+          <div class="community-card__name">
+            <h4>Wilton</h4>
+            <span>Rural Charm</span>
+          </div>
+        </a>
+
+        <a href="/communities#sacramento" class="community-card">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=75" alt="Sacramento" loading="lazy" />
+          <div class="community-card__overlay"></div>
+          <div class="community-card__name">
+            <h4>Sacramento</h4>
+            <span>Capital City</span>
+          </div>
+        </a>
+
+        <a href="/communities#fair-oaks" class="community-card">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=75" alt="Fair Oaks" loading="lazy" />
+          <div class="community-card__overlay"></div>
+          <div class="community-card__name">
+            <h4>Fair Oaks</h4>
+            <span>Tree-lined Living</span>
+          </div>
+        </a>
+
+        <a href="/communities#roseville" class="community-card">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=75" alt="Roseville" loading="lazy" />
+          <div class="community-card__overlay"></div>
+          <div class="community-card__name">
+            <h4>Roseville</h4>
+            <span>Family Friendly</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="overline">What Our Clients Say</span>
+        <h2>Trusted by Families Across Sacramento</h2>
+      </div>
+
+      <div class="testimonials-grid fade-in">
+        <div class="testimonial-card">
+          <p>
+            I had the pleasure of working with Kris Vogt on a purchase of an
+            investment property in Wilton. He was great to work with and I
+            appreciated his clear communication. The purchase was closed in
+            less than 20 days. He made everything very easy.
+          </p>
+          <div class="testimonial-card__author">Cameron Villa</div>
+        </div>
+
+        <div class="testimonial-card">
+          <p>
+            As a fellow real estate professional, I must give Kellie and her team
+            at Vogt Real Estate Group 5 stars! The communication was far and away
+            the best I've experienced in 25 years. She was so friendly and
+            professional and really made the process a breeze.
+          </p>
+          <div class="testimonial-card__author">April Van Patten</div>
+        </div>
+
+        <div class="testimonial-card">
+          <p>
+            We're delighted to have reconnected with the Vogt Real Estate Group!
+            Kris and Kellie are exceptionally joyful people and realtors. Our
+            sale was smooth and efficient; we were treated with warmth, honesty
+            and integrity.
+          </p>
+          <div class="testimonial-card__author">Nancy Kelly</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUYER/SELLER GUIDES ===== -->
+  <section>
+    <div class="container">
+      <div class="guides-grid fade-in">
+        <a href="/sellers-guide" class="guide-card">
+          <img
+            src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=900&q=75"
+            alt="Selling a home"
+            loading="lazy"
+          />
+          <div class="guide-card__overlay"></div>
+          <div class="guide-card__content">
+            <span class="overline" style="color: var(--c-gold);">Selling</span>
+            <h3>Seller's Guide</h3>
+            <p>A step-by-step first time seller's guide.</p>
+            <span class="btn btn-outline" style="border-color: white; color: white; font-size: 0.72rem;">
+              Read the Guide
+            </span>
+          </div>
+        </a>
+
+        <a href="/buyers-guide" class="guide-card">
+          <img
+            src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=900&q=75"
+            alt="Buying a home"
+            loading="lazy"
+          />
+          <div class="guide-card__overlay"></div>
+          <div class="guide-card__content">
+            <span class="overline" style="color: var(--c-gold);">Buying</span>
+            <h3>Buyer's Guide</h3>
+            <p>A step-by-step first time buyer's guide.</p>
+            <span class="btn btn-outline" style="border-color: white; color: white; font-size: 0.72rem;">
+              Read the Guide
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Discover the Value of Your Home</h2>
+      <p>
+        Get a free, no-obligation market analysis from our team.
+        Find out what your property is worth in today's market.
+      </p>
+      <a href="/contact" class="btn btn-outline">Get Your Free Estimate</a>
+    </div>
+  </section>
+
+  <!-- ===== JOIN TEAM ===== -->
+  <section class="join-team">
+    <div class="container">
+      <div class="join-team__grid">
+        <div class="join-team__text fade-in">
+          <span class="overline">Careers</span>
+          <h2>Join Our Team</h2>
+          <p>
+            Join The Vogt Real Estate Group, where your growth and success are
+            our top priority. We offer comprehensive training, cutting-edge
+            tools, and a supportive team environment that empowers you to reach
+            your full potential.
+          </p>
+          <a href="/contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+
+        <div class="join-team__image fade-in">
+          <img
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=75"
+            alt="Real estate team collaboration"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
