@@ -1,0 +1,1 @@
+HOME VALUATION TOOL - Keep SaleCORE's existing home valuation widget for this block. If no widget exists, add one: Right-click → Add Content → Home Valuation Widget. This provides the automated property valuation tool.

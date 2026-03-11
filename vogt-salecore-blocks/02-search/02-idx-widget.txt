@@ -1,0 +1,1 @@
+IDX SEARCH WIDGET - Use SaleCORE's built-in IDX Search widget for this block. In the SaleCORE editor: Right-click → Add Content → IDX Search Widget. Configure to display the full property search experience.
