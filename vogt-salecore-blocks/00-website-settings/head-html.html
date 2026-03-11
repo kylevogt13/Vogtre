@@ -1,0 +1,826 @@
+<!-- Vogt Real Estate Group — Global Head HTML -->
+<!-- Paste into: Website Settings → Head HTML -->
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   VOGT REAL ESTATE GROUP — GLOBAL STYLES
+   ============================================ */
+
+/* --- CSS Variables --- */
+:root {
+  --c-cream: #FAF7F2;
+  --c-gold: #C5A46D;
+  --c-gold-hover: #B8944F;
+  --c-espresso: #2B2118;
+  --c-slate: #6B6259;
+  --c-light-border: #E8E2D9;
+  --c-white: #FFFFFF;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- Typography Overrides (SaleCORE) --- */
+body, p, li, td, th, span, div, a {
+  font-family: var(--font-body) !important;
+  color: var(--c-slate);
+}
+
+h1, h2, h3, h4, h5, h6,
+.page-title, .section-title {
+  font-family: var(--font-heading) !important;
+  color: var(--c-espresso) !important;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* --- Hero Video Section --- */
+.vogt-hero-video {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vogt-hero-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.vogt-hero-video .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(43,33,24,0.55) 0%, rgba(43,33,24,0.7) 100%);
+  z-index: 1;
+}
+
+.vogt-hero-video .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--c-white);
+  padding: 0 24px;
+  animation: heroFadeUp 1s ease-out;
+}
+
+.vogt-hero-video .hero-content h1 {
+  font-family: var(--font-heading) !important;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--c-white) !important;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.vogt-hero-video .hero-content .hero-subtitle {
+  font-family: var(--font-body) !important;
+  font-size: 1.25rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 8px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.vogt-hero-video .hero-content .hero-locations {
+  font-family: var(--font-body) !important;
+  font-size: 1rem;
+  color: var(--c-gold);
+  margin-bottom: 32px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-family: var(--font-body) !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.hero-btn-primary {
+  background: var(--c-gold);
+  color: var(--c-white) !important;
+  border: 2px solid var(--c-gold);
+}
+
+.hero-btn-primary:hover {
+  background: var(--c-gold-hover);
+  border-color: var(--c-gold-hover);
+}
+
+.hero-btn-outline {
+  background: transparent;
+  color: var(--c-white) !important;
+  border: 2px solid rgba(255,255,255,0.6);
+}
+
+.hero-btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--c-white);
+}
+
+/* --- Page Hero (Inner Pages) --- */
+.vogt-page-hero {
+  background: var(--c-espresso);
+  padding: 80px 24px 60px;
+  text-align: center;
+}
+
+.vogt-page-hero h1 {
+  font-family: var(--font-heading) !important;
+  font-size: 2.8rem;
+  color: var(--c-white) !important;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.vogt-page-hero p {
+  font-family: var(--font-body) !important;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- Stats Bar --- */
+.vogt-stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  padding: 48px 24px;
+  background: var(--c-cream);
+  flex-wrap: wrap;
+}
+
+.vogt-stat {
+  text-align: center;
+}
+
+.vogt-stat .stat-number {
+  font-family: var(--font-heading) !important;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--c-gold);
+  display: block;
+}
+
+.vogt-stat .stat-label {
+  font-family: var(--font-body) !important;
+  font-size: 0.85rem;
+  color: var(--c-slate);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+/* --- Sections --- */
+.vogt-section {
+  padding: 80px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.vogt-section-cream {
+  background: var(--c-cream);
+}
+
+.vogt-section-white {
+  background: var(--c-white);
+}
+
+.vogt-section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.vogt-section-header h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 2.2rem;
+  color: var(--c-espresso) !important;
+  margin-bottom: 12px;
+}
+
+.vogt-section-header p {
+  font-size: 1.05rem;
+  color: var(--c-slate);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- Services Grid (Homepage) --- */
+.vogt-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vogt-service-card {
+  text-align: center;
+  padding: 40px 24px;
+  border: 1px solid var(--c-light-border);
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease;
+}
+
+.vogt-service-card:hover {
+  box-shadow: 0 4px 24px rgba(43,33,24,0.08);
+}
+
+.vogt-service-card h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.4rem;
+  color: var(--c-espresso) !important;
+  margin-bottom: 12px;
+}
+
+.vogt-service-card p {
+  font-size: 0.95rem;
+  color: var(--c-slate);
+  line-height: 1.6;
+}
+
+/* --- Communities Grid --- */
+.vogt-communities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vogt-community-card {
+  background: var(--c-cream);
+  padding: 32px 24px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid var(--c-light-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vogt-community-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(43,33,24,0.08);
+}
+
+.vogt-community-card h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.3rem;
+  color: var(--c-espresso) !important;
+  margin-bottom: 4px;
+}
+
+.vogt-community-card .community-tagline {
+  font-size: 0.85rem;
+  color: var(--c-gold);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.vogt-community-card p {
+  font-size: 0.9rem;
+  color: var(--c-slate);
+  line-height: 1.6;
+}
+
+/* --- Community Section (Full Page) --- */
+.vogt-community-section {
+  padding: 60px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--c-light-border);
+}
+
+.vogt-community-section:last-child {
+  border-bottom: none;
+}
+
+.vogt-community-section h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.8rem;
+  color: var(--c-espresso) !important;
+  margin-bottom: 4px;
+}
+
+.vogt-community-section .community-tagline {
+  font-size: 0.95rem;
+  color: var(--c-gold);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.vogt-community-section p {
+  font-size: 1rem;
+  color: var(--c-slate);
+  line-height: 1.7;
+}
+
+/* --- Testimonials --- */
+.vogt-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vogt-testimonial-card {
+  background: var(--c-cream);
+  padding: 32px;
+  border-radius: 4px;
+  border-left: 3px solid var(--c-gold);
+}
+
+.vogt-testimonial-card .testimonial-quote {
+  font-size: 0.95rem;
+  color: var(--c-slate);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.vogt-testimonial-card .testimonial-author {
+  font-family: var(--font-heading) !important;
+  font-size: 1rem;
+  color: var(--c-espresso);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* --- Team Grid --- */
+.vogt-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vogt-team-card {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.vogt-team-card img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid var(--c-light-border);
+}
+
+.vogt-team-card h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.15rem;
+  color: var(--c-espresso) !important;
+  margin-bottom: 4px;
+}
+
+.vogt-team-card .team-role {
+  font-size: 0.85rem;
+  color: var(--c-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.vogt-team-card .team-license {
+  font-size: 0.8rem;
+  color: var(--c-slate);
+  margin-bottom: 4px;
+}
+
+.vogt-team-card .team-phone {
+  font-size: 0.85rem;
+  color: var(--c-slate);
+}
+
+.vogt-team-card .team-phone a {
+  color: var(--c-gold) !important;
+  text-decoration: none;
+}
+
+.vogt-team-card .team-bio {
+  font-size: 0.88rem;
+  color: var(--c-slate);
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+/* --- Guide Steps --- */
+.vogt-steps {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vogt-step {
+  display: flex;
+  gap: 24px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--c-light-border);
+}
+
+.vogt-step:last-child {
+  border-bottom: none;
+}
+
+.vogt-step .step-number {
+  font-family: var(--font-heading) !important;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--c-gold);
+  min-width: 60px;
+  text-align: center;
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.vogt-step .step-content h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.2rem;
+  color: var(--c-espresso) !important;
+  margin-bottom: 8px;
+}
+
+.vogt-step .step-content p {
+  font-size: 0.95rem;
+  color: var(--c-slate);
+  line-height: 1.7;
+}
+
+/* --- CTA Band --- */
+.vogt-cta-band {
+  background: var(--c-espresso);
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.vogt-cta-band h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 2rem;
+  color: var(--c-white) !important;
+  margin-bottom: 12px;
+}
+
+.vogt-cta-band p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 28px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.vogt-cta-band .vogt-btn-outline {
+  margin-top: 8px;
+}
+
+/* --- Buttons --- */
+.vogt-btn-outline {
+  display: inline-block;
+  padding: 14px 36px;
+  font-family: var(--font-body) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--c-gold) !important;
+  border: 2px solid var(--c-gold);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.vogt-btn-outline:hover {
+  background: var(--c-gold);
+  color: var(--c-white) !important;
+}
+
+.vogt-btn-solid {
+  display: inline-block;
+  padding: 14px 36px;
+  font-family: var(--font-body) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: var(--c-gold);
+  color: var(--c-white) !important;
+  border: 2px solid var(--c-gold);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.vogt-btn-solid:hover {
+  background: var(--c-gold-hover);
+  border-color: var(--c-gold-hover);
+}
+
+/* CTA band button variant (white outline) */
+.vogt-cta-band .vogt-btn-outline {
+  color: var(--c-white) !important;
+  border-color: rgba(255,255,255,0.5);
+}
+
+.vogt-cta-band .vogt-btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--c-white);
+  color: var(--c-white) !important;
+}
+
+/* --- Buyer/Seller Guide Cards --- */
+.vogt-guides-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vogt-guide-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+}
+
+.vogt-guide-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vogt-guide-card .guide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(43,33,24,0.2) 0%, rgba(43,33,24,0.75) 100%);
+}
+
+.vogt-guide-card .guide-content {
+  position: relative;
+  z-index: 1;
+  padding: 32px;
+}
+
+.vogt-guide-card h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.5rem;
+  color: var(--c-white) !important;
+  margin-bottom: 8px;
+}
+
+.vogt-guide-card p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+}
+
+/* --- Home Value CTA --- */
+.vogt-home-value-cta {
+  background: var(--c-cream);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.vogt-home-value-cta h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 2.2rem;
+  color: var(--c-espresso) !important;
+  margin-bottom: 12px;
+}
+
+.vogt-home-value-cta p {
+  font-size: 1.05rem;
+  color: var(--c-slate);
+  max-width: 550px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+
+/* --- About Content --- */
+.vogt-about-content {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.vogt-about-content h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.8rem;
+  color: var(--c-espresso) !important;
+  margin-bottom: 24px;
+}
+
+.vogt-about-content p {
+  font-size: 1.05rem;
+  color: var(--c-slate);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* --- Contact Details --- */
+.vogt-contact-details {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.vogt-contact-details h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.6rem;
+  color: var(--c-espresso) !important;
+  margin-bottom: 24px;
+}
+
+.vogt-contact-item {
+  margin-bottom: 20px;
+}
+
+.vogt-contact-item .contact-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-gold);
+  margin-bottom: 4px;
+}
+
+.vogt-contact-item p, .vogt-contact-item a {
+  font-size: 1rem;
+  color: var(--c-slate);
+}
+
+.vogt-contact-item a {
+  color: var(--c-gold) !important;
+  text-decoration: none;
+}
+
+.vogt-contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* --- General Content Block --- */
+.vogt-content-block {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.vogt-content-block h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.8rem;
+  color: var(--c-espresso) !important;
+  margin-bottom: 20px;
+}
+
+.vogt-content-block p {
+  font-size: 1.05rem;
+  color: var(--c-slate);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* --- Animation --- */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .vogt-hero-video {
+    height: 70vh;
+    min-height: 400px;
+  }
+
+  .vogt-hero-video .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .vogt-hero-video .hero-content .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .vogt-page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .vogt-stats-bar {
+    gap: 24px;
+  }
+
+  .vogt-stat .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .vogt-services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vogt-communities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vogt-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vogt-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .vogt-guides-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vogt-step {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .vogt-step .step-number {
+    text-align: left;
+  }
+
+  .hero-btn {
+    display: block;
+    margin: 8px auto;
+    max-width: 260px;
+  }
+
+  .vogt-section {
+    padding: 48px 20px;
+  }
+
+  .vogt-section-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .vogt-cta-band {
+    padding: 48px 20px;
+  }
+
+  .vogt-cta-band h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vogt-hero-video .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .vogt-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vogt-stats-bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+</style>

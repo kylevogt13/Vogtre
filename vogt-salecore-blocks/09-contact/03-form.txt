@@ -1,0 +1,1 @@
+CONTACT FORM - Use SaleCORE's built-in Form widget for this block. In the SaleCORE editor: Right-click → Add Content → Form Widget. Configure with fields for: Name, Email, Phone, Inquiry Type (dropdown: Buying, Selling, Valuation, General), and Message.
